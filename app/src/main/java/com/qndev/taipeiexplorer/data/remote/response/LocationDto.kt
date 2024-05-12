@@ -1,5 +1,8 @@
 package com.qndev.taipeiexplorer.data.remote.response
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
+
 
 data class LocationDto(
     val address: String?,
@@ -33,14 +36,15 @@ data class LocationDto(
     val zipcode: String?
 )
 
-
+@Parcelize
 data class CommonData(
     val id: Int?,
     val name: String?
-)
+) : Parcelable
 
+@Parcelize
 data class ImageData(
     val src: String?,
     val subject: String?,
     val ext: String?
-)
+) : Parcelable

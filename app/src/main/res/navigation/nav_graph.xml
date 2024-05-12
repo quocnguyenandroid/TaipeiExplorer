@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.qndev.taipeiexplorer.presentation.screen.main.MainFragment"
+        android:label="MainFragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_detailFragment"
+            app:destination="@id/detailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.qndev.taipeiexplorer.presentation.screen.detail.DetailFragment"
+        android:label="DetailFragment"
+        tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="images"
+            app:argType="com.qndev.taipeiexplorer.data.remote.response.ImageData[]" />
+        <argument
+            android:name="introduction"
+            app:argType="string" />
+        <argument
+            android:name="address"
+            app:argType="string" />
+        <argument
+            android:name="tel"
+            app:argType="string" />
+        <argument
+            android:name="lat"
+            app:argType="float" />
+        <argument
+            android:name="lng"
+            app:argType="float" />
+        <argument
+            android:name="url"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_detailFragment_to_webViewFragment"
+            app:destination="@id/webViewFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/webViewFragment"
+        android:name="com.qndev.taipeiexplorer.presentation.screen.webview.WebViewFragment"
+        android:label="WebViewFragment"
+        tools:layout="@layout/fragment_webview">
+        <argument
+            android:name="url"
+            app:argType="string" />
+    </fragment>
+
+
+</navigation>

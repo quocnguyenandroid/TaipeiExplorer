@@ -17,6 +17,8 @@ gson = "2.10.1"
 okhttpBom = "4.12.0"
 room = "2.6.1"
 navigation = "2.7.7"
+swipeRefreshLayout = "1.1.0"
+kotlinPlugin = "1.9.24"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -27,12 +29,13 @@ androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version
 material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+androidx-swiperefreshlayout = { group = "androidx.swiperefreshlayout", name = "swiperefreshlayout", version.ref = "swipeRefreshLayout" }
 
 coil-compose = { group = "io.coil-kt", name = "coil", version.ref = "coil" }
 
-navigation-fragment = {group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation"}
-navigation-ui-ktx = {group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation"}
-navigation-safe-args = {group = "androidx.navigation", name = "navigation-safe-args-gradle-plugin", version.ref = "navigation"}
+navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }
+navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigation" }
+navigation-safe-args = { group = "androidx.navigation", name = "navigation-safe-args-gradle-plugin", version.ref = "navigation" }
 
 coroutines-core = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
 coroutines-android = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android" }
@@ -57,5 +60,6 @@ android-application = { id = "com.android.application", version.ref = "agp" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 jetbrains-kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 google-dagger-hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
-androidx-navigation-safeargs = {id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation"}
+androidx-navigation-safeargs = { id = "androidx.navigation.safeargs.kotlin", version.ref = "navigation" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlinPlugin" }
 

@@ -36,11 +36,13 @@ class LocationRepositoryImpl @Inject constructor(
                 return@flow
             }
 
-            // Map LocationDto to LocationEntity
-            val locationEntities = locations.location.map { locationDto ->
-                locationDto.toLocationEntity(page, lang)
-            }
-
+            // Map LocationDto to LocationEntity if images is not empty
+            val locationEntities =
+                locations.location
+                    .filter { !it.images.isNullOrEmpty() }
+                    .map { locationDto ->
+                        locationDto.toLocationEntity(page, lang)
+                    }
             // Save data to local database
             locationDatabase.locationDao.upsertLocations(locationEntities)
 

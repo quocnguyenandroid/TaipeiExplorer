@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white200">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/locationImage"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                tools:ignore="ContentDescription" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/locationImageList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <TextView
+                    android:id="@+id/locationName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    tools:text="National Palace Museum" />
+
+                <TextView
+                    android:id="@+id/locationIntroduction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:textColor="@color/black200"
+                    tools:text="The Taipei National Palace Museum is a world-class museum that hosts an eclectic collection of treasures kept by generations of Emperors ruling from the Forbidden City. In WWII, Nationalist troops seized the most important pieces in order to prevent invaders from ransacking China&#39;s national treasures. A twist of fate eventually brought these treasures to Taiwan.\r\n\r\nThe Taipei National Palace Museum is designed in the style of a Northern Chinese palace. The museum is home to hundreds of thousands of historical relics that make up the world&#39;s most comprehensive and precious collection of ancient Chinese artifacts. The entire collection covers 5,000 years of China&#39;s historical and artistic achievements.\r\n\r\nThe museum provides Chinese, English, French, German, Japanese, Spanish and Korean language guides and museum-related literature. The museum is a must- see on any visitor&#39;s itinerary." />
+
+                <TextView
+                    android:id="@+id/locationAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:drawablePadding="8dp"
+                    android:textColor="@color/black200"
+                    android:textSize="14sp"
+                    app:drawableStartCompat="@drawable/ic_location"
+                    tools:text="No. 505, Sec. 4, Ren-ai Rd.,Xinyi Dist.,Taipei City 110" />
+
+                <TextView
+                    android:id="@+id/phoneNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:drawablePadding="8dp"
+                    android:textColor="@color/black200"
+                    android:textSize="14sp"
+                    app:drawableStartCompat="@drawable/ic_phone"
+                    tools:text="+886-2-25505220" />
+
+                <TextView
+                    android:id="@+id/urlText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="4dp"
+                    android:drawablePadding="8dp"
+                    android:textColor="@android:color/holo_blue_dark"
+                    android:textSize="14sp"
+                    app:drawableStartCompat="@drawable/ic_link"
+                    tools:text="https://www.travel.taipei/en/attraction/details/1692" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="32dp"
+        android:background="@drawable/bg_circle_white"
+        android:padding="4dp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
