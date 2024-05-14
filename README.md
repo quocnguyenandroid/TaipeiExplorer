@@ -20,5 +20,5 @@ This app helps tourists explore popular destinations in Taipei with attraction p
 - Offline mode (cache data to used when offline).
 
 ## Demo
-
+[App flow](record/flow.webm)
 
