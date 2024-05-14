@@ -3,6 +3,7 @@ This app helps tourists explore popular destinations in Taipei with attraction p
 
 ## Tech-stack
 
+* **Architecture**: Clean architecture with MVVM.
 * **Hilt**: Dependency injection framework for Android.
 * **Retrofit**: HTTP client library for making network requests.
 * **Gson**: JSON serialization/deserialization library for parsing API responses.
