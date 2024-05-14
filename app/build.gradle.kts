@@ -58,8 +58,8 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 
-    //Coil compose
-    implementation(libs.coil.compose)
+    //Coil
+    implementation(libs.coil)
 
     //Coroutines
     implementation(libs.coroutines.core)
